@@ -1,0 +1,316 @@
+/* @font-face {
+    font-family: "Arial-BoldMT";
+    src: url("/Fonts/BuurtCampusArial-Bold.ttf");
+}
+
+@font-face {
+    font-family: "BuurtCampusArial-Bold";
+    src: url("/Fonts/BuurtCampusArial-Bold.ttf");
+} */
+
+html,
+header,
+body {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4em;
+    min-width: 320px;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    place-items: center;
+    z-index: 2;
+
+    @media (min-width: 460px) {
+        display: grid;
+    }
+}
+
+p {
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+p.bold {
+    margin: 0;
+}
+
+/* blockquote */
+p.font-size-l {
+    padding: 0.5em 1em 0.5em 1em;
+    margin: 0;
+}
+
+.logo {
+    width: 190px;
+    object-fit: contain;
+}
+
+.textLogo {
+    font-family: "BuurtCampusArial-Bold";
+    font-size: var(--font-size-l);
+    margin: 1em 0 1em 0;
+}
+
+.headerLogo {
+    display: flex;
+    justify-self: center;
+    gap: 0.5em;
+
+    @media (min-width: 480px) {
+        justify-self: left;
+        margin: 0 1.5em 0 1.5em;
+    }
+}
+
+button {
+    border: none;
+    border-radius: 1em 0 0 1em;
+    width: fit-content;
+    font-size: 1rem;
+}
+
+
+/* MARK: navknop */
+#navKnop {
+    display: grid;
+    font-size: var(--font-size-m);
+    padding-right: 2rem;
+    translate: 0 0;
+    padding: 0.1em 2em 0.1em 0.5em;
+
+    @media (max-width: 950px) {
+        display: none;
+        grid-column-start: 3;
+    }
+}
+
+
+#navKnop:active {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    background-color: var(--color-white);
+}
+
+#navKnop:hover,
+#navKnop:focus-visible {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    background-color: var(--color-white);
+}
+
+#navKnop.primary-color-zuidoost:active {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    color: var(--color2);
+}
+
+#navKnop.primary-color-zuidoost:hover,
+#navKnop.primary-color-zuidoost:focus-visible {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    color: var(--color2);
+}
+
+#navKnop.primary-color-oost:active {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    color: var(--color3);
+}
+
+#navKnop.primary-color-oost:hover,
+#navKnop.primary-color-oost:focus-visible {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    color: var(--color3);
+}
+
+#navKnop.primary-color-nieuw-west:active {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    color: var(--color4);
+}
+
+#navKnop.primary-color-nieuw-west:hover,
+#navKnop.primary-color-nieuw-west:focus-visible {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    color: var(--color4);
+}
+
+.buttonMenu {
+    color: inherit;
+    border: none;
+    font-size: 2rem;
+    background-color: transparent;
+}
+
+.navBar {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+#hamburgerMenuKnop {
+    display: none;
+    margin: 0 1.5em 0 1.5em;
+    font-weight: bold;
+
+    @media (min-width: 460px) {
+        grid-column-start: 3;
+        grid-row-start: 1;
+    }
+
+    @media (max-width: 950px) {
+        display: block;
+    }
+}
+
+/* MARK: mobilenav */
+#navListMobile {
+    list-style: none;
+    padding: 0 0 0 0;
+    display: grid;
+    gap: 0em;
+    justify-content: center;
+    translate: center;
+}
+
+#mobileNav {
+    grid-column-start: 3;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+#mobileNav.active {
+    display: block;
+}
+
+#mobileNavKnop {
+    /* color: var(--color-white); */
+    padding-right: 3em;
+    color: inherit;
+}
+
+#mobileNavKnop:hover,
+#mobileNavKnop:focus-visible {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    background-color: var(--color-white);
+}
+
+#article-container {
+    max-width: 65ch;
+}
+
+/* knoppen in de nav */
+.navKnop {
+    font-size: var(--font-size-m);
+}
+
+#knop-omhoog {
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+}
+
+/* title vertical */
+.sideTitle {
+    font-size: 28pt;
+    font-family: BuurtCampusArial-Bold;
+    font-weight: 300;
+    writing-mode: vertical-rl;
+    rotate: 180deg;
+    align-items: center;
+    white-space: nowrap;
+    display: flex;
+    float: left;
+    padding: 0.5em 0 0.5em 0.5em;
+    margin: 0;
+}
+
+/* naam van buurt met vlaggetje links boven in pagina */
+#headerBuurtTitle {
+    font-family: BuurtCampusArial-Bold;
+    clip-path: polygon(90% 0, calc(100% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    padding: 0.1em 2.5em 0.1em 0.5em;
+    margin: 0;
+    margin-top: 2em;
+    width: max-content;
+    align-self: left;
+    font-size: 1.05em;
+}
+
+main {
+    justify-self: center;
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    width: 100%;
+    min-width: 300px;
+    max-width: 70ch;
+}
+
+body {
+    width: 100%;
+}
+
+figure {
+    align-items: center;
+    margin: 0;
+}
+
+.buttonDoelgroepMobiel {
+
+}
+
+/* MARK: doelgroep */
+.menuKnopDoelgroep {
+    z-index: 4;
+    position: fixed;
+    top: 121.86px;
+    right: 0;
+    padding: 1em 0.5em 1em 0.5em;
+}
+
+#knopDoelgroep {
+    display: grid;
+    grid-template-rows: max-content;
+    font-size: var(--font-size-m);
+    translate: 0 0;
+    padding: 0em 3em 0em 0.2em;
+    margin-bottom: 0.2em;
+}
+
+    max-width: 250px;
+    position: fixed;
+    padding: 0.5em 0 0.3em 0.5em;
+    top: 121.86px;
+    margin-left: 2em;
+
+#knopDoelgroep:hover,
+#knopDoelgroep:focus-visible {
+    clip-path: polygon(90% 0, calc(100% - 1.8em) 50%, 90% 100%, 0 100%, 0 0);
+    background-color: var(--color-white);
+}
+
+/* MARK: footer */
+#footer {
+    width: 100%;
+    background-color: var(--color-lucht-blauw);
+    padding: 1em 0 1em 0;
+}
+
+.formulierFooter {
+    width: 50%;
+    justify-items: center;
+}
+
+.contact-form {
+    border-radius: 0%;
+    width: 100%;
+}
+
+fieldset {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
