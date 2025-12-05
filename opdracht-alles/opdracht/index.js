@@ -1,3 +1,4 @@
+
 const mobileNav=document.getElementById("mobileNav")
 function openMobileNav(){
     mobileNav.classList.add("active")
