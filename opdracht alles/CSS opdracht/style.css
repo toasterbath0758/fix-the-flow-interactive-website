@@ -304,8 +304,6 @@ figure {
 }
 
 
-
-
 #knopDoelgroep:hover,
 #knopDoelgroep:focus-visible {
     clip-path: polygon(90% 0, calc(100% - 1.8em) 50%, 90% 100%, 0 100%, 0 0);
