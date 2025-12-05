@@ -7,22 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://toasterbath0758.github.io/look-and-feel-styleguide-BCK/styleguide-buurtcampuskrant.css">
     <link rel="stylesheet" href="/opdracht alles/CSS opdracht/style.css">
-    <script src="/opdracht alles/opdracht/index.js"defer></script>
     
 </head>
     
-    <!-- <section class="menuDoelgroep">
-        <li><a id="knopDoelgroep" class="primary-color-main">HVA-medewerkers</a></li>
-        <li><a id="knopDoelgroep" class="primary-color-main">studenten</a></li>
-        <li><a id="knopDoelgroep" class="primary-color-main">bewoners</a></li>
-        <li><a id="knopDoelgroep" class="primary-color-main">wijkpartners</a></li>
-    </section> -->
+
 <body>
     <header class="header-main" id="menu-top">
         <section class="headerLogo">
             <p class="textLogo">BUURTCAMPUSKRANT</p>
         </section>
-        <button class="main-home" onclick="openMobileNav()" id="hamburgerMenuKnop">menu</button>
+        <button class="color-main" onclick="openMobileNav()" id="hamburgerMenuKnop">menu</button>
         <nav id="mobileNav" class="primary-color-main">
             <button class="buttonMenu" onclick="closeMobileNav()">x</button>
             <ul id="navListMobile">
@@ -41,11 +35,17 @@
             </ul>
         </nav>
     </header>
-    <button class="menuKnopDoelgroep primary-color-main"><</button>
+    <button class="openDoelgroepMenu primary-color-main"><</button>
+    <!-- <section class="openDoelgroepMenu">
+        <li><a id="knopDoelgroep" class="primary-color-main">HVA-medewerkers</a></li>
+        <li><a id="knopDoelgroep" class="primary-color-main">studenten</a></li>
+        <li><a id="knopDoelgroep" class="primary-color-main">bewoners</a></li>
+        <li><a id="knopDoelgroep" class="primary-color-main">wijkpartners</a></li>
+    </section> -->
     <main>
         <a href="#menu-top" class="button" id="knop-omhoog">^</a>
         <p class="primary-color-main" id="headerBuurtTitle">Algemeen</p>
-
+        
         <div id="article-container" class="main-home">
             <h1>
                 De nieuwe look van de Buurtcampus:
@@ -110,14 +110,14 @@
         <blockquote class="blockquote1">
             <p class="font-size-l">
                 'Samen terugkerende programma's opzetten voor de buurt'</p>
-        </blockquote>
+            </blockquote>
+            
+            
+        </main>
 
-
-</main>
-
-
-
-    <section id="footer" class="formulierFooter">
+        
+        
+        <section id="footer" class="formulierFooter">
         <h2>Contact formulier</h2>
         <form class="formulierFooter">
 
@@ -125,20 +125,20 @@
                 <label class="form-label-text">e-mail</label>
                 <input type="text" placeholder="e-mail" class="input-field">
             </p>
-
+            
             <fieldset>
                 <legend class="">Kies een wijk</legend>
-
+                
                 <label class="">
                     <input type="radio" name="radio-options" value="option 1" checked class="">
                     Oost
                 </label>
-
+                
                 <label class="">
                     <input type="radio" name="radio-options" value="option 2" class="">
                     Zuidoost
                 </label>
-
+                
                 <label class="">
                     <input type="radio" name="radio-options" value="option 3" class="">
                     Nieuw-West
@@ -156,3 +156,4 @@
     </section>
 </body>
 </html>
+<script src="/opdracht alles/opdracht/index.js"></script>

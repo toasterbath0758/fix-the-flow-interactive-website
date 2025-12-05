@@ -66,9 +66,12 @@ p.font-size-l {
     }
 }
 
+
+
 button {
     border: none;
-    border-radius: 1em 0 0 1em;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
     width: fit-content;
     font-size: 1rem;
 }
@@ -87,7 +90,6 @@ button {
         grid-column-start: 3;
     }
 }
-
 
 #navKnop:active {
     clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
@@ -138,6 +140,9 @@ button {
     border: none;
     font-size: 2rem;
     background-color: transparent;
+    position: fixed;
+    right: 2.8em;
+    top: 0.3em;
 }
 
 .navBar {
@@ -168,6 +173,10 @@ button {
     gap: 0em;
     justify-content: center;
     translate: center;
+}
+
+ul#navListMobile {
+    padding-top: 3em;
 }
 
 #mobileNav {
@@ -259,17 +268,25 @@ figure {
     margin: 0;
 }
 
-.buttonDoelgroepMobiel {
+/* MARK: doelgroep */
 
+.menuDoelgroep.active {
+    display: block;
 }
 
-/* MARK: doelgroep */
-.menuKnopDoelgroep {
-    z-index: 4;
+.openDoelgroepMenu {
+    font-weight: bold;
+    border: none;
+    border-radius: 1em 0 0 1em;
+    width: fit-content;
+    font-size: 1rem;
+    z-index: 5;
     position: fixed;
     top: 121.86px;
     right: 0;
     padding: 1em 0.5em 1em 0.5em;
+    box-shadow: 0px 0px 15px white;
+    background-color: var(--color-lucht-blauw);
 }
 
 #knopDoelgroep {
@@ -279,13 +296,15 @@ figure {
     translate: 0 0;
     padding: 0em 3em 0em 0.2em;
     margin-bottom: 0.2em;
+    max-width: 250px;
+    top: 121.86px;
+    top: 3em;
+    margin-left: 0;
+    z-index: 4;
 }
 
-    max-width: 250px;
-    position: fixed;
-    padding: 0.5em 0 0.3em 0.5em;
-    top: 121.86px;
-    margin-left: 2em;
+
+
 
 #knopDoelgroep:hover,
 #knopDoelgroep:focus-visible {
