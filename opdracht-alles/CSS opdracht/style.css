@@ -150,10 +150,11 @@ button {
     grid-row-start: 1;
 }
 
-#hamburgerMenuKnop {
+.hamburgerMenuKnop {
     display: none;
     margin: 0 1.5em 0 1.5em;
     font-weight: bold;
+    z-index: 999;
 
     @media (min-width: 460px) {
         grid-column-start: 3;
@@ -179,7 +180,7 @@ ul#navListMobile {
     padding-top: 3em;
 }
 
-#mobileNav {
+.mobileNav {
     grid-column-start: 3;
     display: none;
     width: 100%;
@@ -187,21 +188,22 @@ ul#navListMobile {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 999;
+    z-index: 10;
 }
 
-#mobileNav.active {
+.mobileNav.active {
     display: block;
+    
 }
 
-#mobileNavKnop {
+.mobileNavKnop {
     /* color: var(--color-white); */
     padding-right: 3em;
     color: inherit;
 }
 
-#mobileNavKnop:hover,
-#mobileNavKnop:focus-visible {
+.mobileNavKnop:hover,
+.mobileNavKnop:focus-visible {
     clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
     background-color: var(--color-white);
 }
@@ -211,9 +213,9 @@ ul#navListMobile {
 }
 
 /* knoppen in de nav */
-.navKnop {
+/* .navKnop {
     font-size: var(--font-size-m);
-}
+} */
 
 #knop-omhoog {
     position: fixed;
