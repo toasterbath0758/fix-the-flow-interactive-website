@@ -29,6 +29,26 @@ header {
     }
 }
 
+.color-main {
+    color: var(--color3);
+}
+
+.color-zuidoost1 {
+    background-color: white;
+    color: var(--color2);
+}
+
+.color-oost1 {
+    background-color: white;
+    color: var(--color3);
+}
+
+.color-nieuw-west1 {
+    background-color: white;
+    color: var(--color4);
+}
+
+
 p {
     margin: 0;
     margin-bottom: 1em;
@@ -154,6 +174,24 @@ button {
     display: none;
     margin: 0 1.5em 0 1.5em;
     font-weight: bold;
+    z-index: 10;
+
+    @media (min-width: 460px) {
+        grid-column-start: 3;
+        grid-row-start: 1;
+    }
+
+    @media (max-width: 950px) {
+        display: block;
+    }
+}
+
+.closeHamburgerMenuKnop {
+    display: none;
+    position: fixed;
+    right: 3em;
+    top: 1.2em;
+    font-weight: bold;
     z-index: 999;
 
     @media (min-width: 460px) {
@@ -182,18 +220,30 @@ ul#navListMobile {
 
 .mobileNav {
     grid-column-start: 3;
-    display: none;
     width: 100%;
     height: 100%;
     position: fixed;
+    visibility: hidden;
     left: 0;
-    top: 0;
-    z-index: 10;
+    top: -100%;
+    z-index: 14;
+    
+    @starting-style {
+        display: block;
+        top: 0;
+        visibility: visible;
+    }
 }
 
 .mobileNav.active {
     display: block;
-    
+    top: 0;
+    transition: 0.3s ease;
+    visibility: visible;
+
+    @starting-style {
+        top: 0%;
+    }
 }
 
 .mobileNavKnop {
@@ -272,26 +322,46 @@ figure {
 
 /* MARK: doelgroep */
 
-.menuDoelgroep.active {
-    display: block;
+.openHetDoelgroepMenuKnop {
+    width: 1em;
+    height: 4em;
+    border-radius: 1em 0 0 1em;
+    position: fixed;
+    /* right: 225.58px; */
+    right: 0;
+    top: 9.5em;
+    z-index: 13;
+    box-shadow: 0 0 10px white;
 }
+
+/* .openDoelgroepMenu {} */
 
 .openDoelgroepMenu {
-    font-weight: bold;
-    border: none;
-    border-radius: 1em 0 0 1em;
-    width: fit-content;
-    font-size: 1rem;
-    z-index: 5;
-    position: fixed;
-    top: 121.86px;
-    right: 0;
-    padding: 1em 0.5em 1em 0.5em;
-    box-shadow: 0px 0px 15px white;
     background-color: var(--color-lucht-blauw);
+    width: fit-content;
+    position: fixed;
+    z-index: 5;
+    right: 0;
+    padding: 1em;
+    padding-right: 3em;
+    border-radius: 1em 0 0 1em;
+
+    right: -100%;
+    z-index: 12;
+    transition: 0.3s ease;
+
+    @starting-style {
+        display: block;
+        right: 0;
+        visibility: visible;
+    }
 }
 
-#knopDoelgroep {
+.openDoelgroepMenu.active {
+    right: 0%;
+}
+
+.knopDoelgroep.active {
     display: grid;
     grid-template-rows: max-content;
     font-size: var(--font-size-m);
@@ -302,12 +372,16 @@ figure {
     top: 121.86px;
     top: 3em;
     margin-left: 0;
-    z-index: 4;
+    z-index: 100;
+    right: 0;
 }
 
+.knopDoelgroep, a {
+    font-size: var(--font-size-m);
+}
 
-#knopDoelgroep:hover,
-#knopDoelgroep:focus-visible {
+.knopDoelgroep:hover,
+.knopDoelgroep:focus-visible {
     clip-path: polygon(90% 0, calc(100% - 1.8em) 50%, 90% 100%, 0 100%, 0 0);
     background-color: var(--color-white);
 }
