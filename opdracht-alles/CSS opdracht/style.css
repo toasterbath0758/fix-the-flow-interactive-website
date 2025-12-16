@@ -246,16 +246,60 @@ ul#navListMobile {
     }
 }
 
-.mobileNavKnop {
+#mobileNavKnop {
     /* color: var(--color-white); */
     padding-right: 3em;
     color: inherit;
 }
 
-.mobileNavKnop:hover,
-.mobileNavKnop:focus-visible {
+#mobileNavKnop:hover,
+#mobileNavKnop:focus-visible {
     clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
     background-color: var(--color-white);
+}
+
+#mobileNavKnop:active {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    background-color: var(--color-white);
+}
+
+#mobileNavKnop:hover,
+#mobileNavKnop:focus-visible {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    background-color: var(--color-white);
+}
+
+#mobileNavKnop.primary-color-zuidoost:active {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    color: var(--color2);
+}
+
+#mobileNavKnop.primary-color-zuidoost:hover,
+#mobileNavKnop.primary-color-zuidoost:focus-visible {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    color: var(--color2);
+}
+
+#mobileNavKnop.primary-color-oost:active {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    color: var(--color3);
+}
+
+#mobileNavKnop.primary-color-oost:hover,
+#mobileNavKnop.primary-color-oost:focus-visible {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    color: var(--color3);
+}
+
+#mobileNavKnop.primary-color-nieuw-west:active {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    color: var(--color4);
+}
+
+#mobileNavKnop.primary-color-nieuw-west:hover,
+#mobileNavKnop.primary-color-nieuw-west:focus-visible {
+    clip-path: polygon(90% 0, calc(95% - 1.5em) 50%, 90% 100%, 0 100%, 0 0);
+    color: var(--color4);
 }
 
 #article-container {
@@ -329,7 +373,7 @@ figure {
     position: fixed;
     /* right: 225.58px; */
     right: 0;
-    top: 9.5em;
+    top: 11.5em;
     z-index: 13;
     box-shadow: 0 0 10px white;
 }
@@ -342,13 +386,14 @@ figure {
     position: fixed;
     z-index: 5;
     right: 0;
-    padding: 1em;
+    margin-top: 2em;
+    padding: 0.5em;
     padding-right: 3em;
     border-radius: 1em 0 0 1em;
 
     right: -100%;
     z-index: 12;
-    transition: 0.3s ease;
+    
 
     @starting-style {
         display: block;
@@ -359,6 +404,7 @@ figure {
 
 .openDoelgroepMenu.active {
     right: 0%;
+    transition: 0.3s ease;
 }
 
 .knopDoelgroep.active {
