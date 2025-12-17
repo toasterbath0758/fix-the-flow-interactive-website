@@ -13,12 +13,13 @@ Het project heeft een krant ‘look and feel’.
 De header heeft een blijvende navigatiebalk waardoor je op elk moment naar verschillende onderdelen van onze website kunt gaan.
 er zijn op het moment 2 paginas.
 <hr>
-<img width="753" height="450" alt="laptop" src="https://github.com/user-attachments/assets/c37faf70-5aa0-4949-b7b1-516d5e5bbbc6" />
+<img width="250" alt="mobile-black (1)" src="https://github.com/user-attachments/assets/65b21223-ea93-4196-a398-8235a90a8640" />
+<img width="250" alt="mobile-black" src="https://github.com/user-attachments/assets/0c2301ea-5506-4148-9b29-a1f989f5a5c6" />
 
 
 
 ## Kenmerken
-De website is gebouwd met HTML en CSS.
+De website is gebouwd met HTML, CSS en JS.
 de css heeft de styling van de huisstijl van de BuurtCampusKrant
 interessante dingen die ik heb toegevoegd:
 https://github.com/toasterbath0758/all-human-accessible-website/blob/970553d5e9714ffccb13da889ada8f39069678d5/style.css#L73-L79
@@ -35,10 +36,11 @@ https://github.com/toasterbath0758/all-human-accessible-website/blob/970553d5e97
 De structuur van de body is HEADER, MAIN en FOOTER:
 ## Header
 In de header staat de navigatiebalk met links naar verschillende onderdelen van mijn website.
+op mobiel en tabletview is er een mobileNav deze heb ik met JS gemaakt.
 ## Main
-in de main staat alle text en alle images
+in de main staan alle artikelen.
 ## Footer
-mijn site heeft nog geen footer!
+in de footer staat een formulier waarin je over leuke dingen uit jouw buurt een bericht kan achterlaten!
 
 <hr>
 
