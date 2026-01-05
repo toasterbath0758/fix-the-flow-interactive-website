@@ -15,6 +15,11 @@ De header heeft een blijvende navigatiebalk waardoor je op elk moment naar versc
 <img width="250" alt="mobile-black (1)" src="https://github.com/user-attachments/assets/65b21223-ea93-4196-a398-8235a90a8640" />
 <img width="250" alt="mobile-black" src="https://github.com/user-attachments/assets/0c2301ea-5506-4148-9b29-a1f989f5a5c6" />
 
+## De interactie
+Je hebt de ontwerpkeuzes voor jouw UI gedocumenteerd in de Readme (DoD)
+ik heb een knop met een pijltje naar links dat een menu opent. (dit geeft feedback en feedforward)
+Feedback: dat met menu opent als je op de knop drukt.
+Feedforward: het pijltje naar links icoontje.
 
 
 ## Kenmerken
